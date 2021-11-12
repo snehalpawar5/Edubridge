@@ -4,7 +4,7 @@ Each player has these components and simultaneously chooses either Rock, Paper, 
 It has some rules like:
 1.Rock beats Scissors but loses to Paper.
 2.Paper beats Rock but loses to Scissors.
-3.Scissors beats Paper but loses to Rock.*/
+3.Scissors beats Paper but loses to Rock. */
 	
 	
 import java.util.Scanner;
