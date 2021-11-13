@@ -88,22 +88,7 @@ class LibraryManagementSystem
 		}
 		}
 
-	 /*{
-	System.out.println("**Book Management System Login**");
-	 Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter your name");
-        String name = sc.next();
-        System.out.println("Please enter your role (1, ordinary user 2, administrator)");
-        int role = sc.nextInt();
-        sc.close();
-        if(role == 1)
-        {
-           User();
-        }
-          Admin();
-   }	 */
-
-
+	 
 static void User()
 {
 //Enter the account and password correctly, enter the library management system
