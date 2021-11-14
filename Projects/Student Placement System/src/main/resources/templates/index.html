@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Student Placement System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Student Placement System</title>
+
+</head>
+<body>
+<div class="m-4">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="images/logo.jpg" height="45" alt="CoolBrand">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" class="nav-item nav-link active">Home</a>
+                    <a href="/new" class="nav-item nav-link">Create New Profile</a>
+                    <a href="/myjobs" class="nav-item nav-link">My Jobs</a>
+                    <!--a href="/edit" class="nav-item nav-link">Edit</a>
+                    <a href="/delete" class="nav-item nav-link">Delete</a-->
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a href="/logout" class="nav-item nav-link">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+   <br/>
+   <div align="center">
+     <h1>Student Placement System</h1>
+     <br>
+     <h2>Students List</h2>
+     <!--a href="/new">Create New Profile</a-->
+     <br/>
+     <table border="1" cellpadding="10">
+     <table class="table table-striped">
+           <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Branch</th>
+                    <th>Year</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                  <tr th:each="student : ${listStudents}">
+                      <td th:text="${student.id}">Id</td>
+                      <td th:text="${student.name}">Name</td>
+                      <td th:text="${student.mobile}">Mobile</td>
+                      <td th:text="${student.branch}">Branch</td>
+                      <td th:text="${student.year}">Year</td>
+                      <td th:text="${student.percentage}">Percentage</td>
+                      <td><a th:href="@{/edit/{id}(id=${student.id})}" class="btn btn-primary btn-lg">Edit</a></td>
+                      <td><a th:href="@{/delete/{id}(id=${student.id})}" class="btn btn-primary btn-lg">Delete</a></td>
+                  </tr>
+            </tbody>
+     </table>
+     </div>
+   </div>
+</body>
+</html>
